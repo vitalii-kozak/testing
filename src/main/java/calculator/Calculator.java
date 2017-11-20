@@ -21,7 +21,7 @@ public class Calculator {
         this.statisticService = statisticService;
         this.countingService = countingService;
 
-        // Map initialization comes here
+        // Map operation initialization start here
         validationMap = new HashMap<>();
         validationMap.put(Service.ONE, new ValidationServiceOne());
         validationMap.put(Service.TWO, new ValidationServiceTwo());
@@ -39,14 +39,20 @@ public class Calculator {
     }
 
     public ComplexObject subtract(ComplexObject param1, ComplexObject param2) {
-        return countingService.subtrack(param1,param2);
+        validateOperation(param1,param2);
+        statisticService.increase(Operation.SUBTRACT);
+        return countingService.subtract(param1,param2);
     }
 
     public ComplexObject multiply(ComplexObject param1, ComplexObject param2) {
+        validateOperation(param1,param2);
+        statisticService.increase(Operation.MULTIPLY);
         return countingService.multiply(param1,param2);
     }
 
     public ComplexObject divide(ComplexObject param1, ComplexObject param2) {
+        validateOperation(param1,param2);
+        statisticService.increase(Operation.DIVIDE);
         return countingService.divide(param1,param2);
     }
 

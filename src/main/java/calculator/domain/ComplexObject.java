@@ -33,18 +33,6 @@ public class ComplexObject {
         this.valueB = valueB;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ComplexObject that = (ComplexObject) o;
-
-        if (valueA != that.valueA) return false;
-        return valueB == that.valueB;
-
-    }
-
     public Service getService() {
         return service;
     }
@@ -54,9 +42,22 @@ public class ComplexObject {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ComplexObject that = (ComplexObject) o;
+
+        if (valueA != that.valueA) return false;
+        if (valueB != that.valueB) return false;
+        return service == that.service;
+    }
+
+    @Override
     public int hashCode() {
         int result = valueA;
         result = 31 * result + valueB;
+        result = 31 * result + (service != null ? service.hashCode() : 0);
         return result;
     }
 
@@ -65,6 +66,7 @@ public class ComplexObject {
         return "ComplexObject{" +
                 "valueA=" + valueA +
                 ", valueB=" + valueB +
+                ", service=" + service +
                 '}';
     }
 }

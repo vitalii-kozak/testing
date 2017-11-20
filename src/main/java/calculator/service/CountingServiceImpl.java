@@ -14,7 +14,7 @@ public class CountingServiceImpl implements CountingService{
         return result;
     }
 
-    public ComplexObject subtrack(ComplexObject param1, ComplexObject param2) {
+    public ComplexObject subtract(ComplexObject param1, ComplexObject param2) {
         ComplexObject result = new ComplexObject();
         result.setValueA(param1.getValueA() - param2.getValueA());
         result.setValueB(param1.getValueB() - param2.getValueB());
