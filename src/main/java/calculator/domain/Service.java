@@ -6,5 +6,5 @@ package calculator.domain;
 public enum Service {
     ONE,
     TWO,
-    TREE
+    THREE
 }

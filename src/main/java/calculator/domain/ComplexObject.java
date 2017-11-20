@@ -6,13 +6,15 @@ package calculator.domain;
 public class ComplexObject {
     private int valueA;
     private int valueB;
+    private Service service;
 
     public ComplexObject() {
     }
 
-    public ComplexObject(int valueA, int valueB) {
+    public ComplexObject(int valueA, int valueB, Service service) {
         this.valueA = valueA;
         this.valueB = valueB;
+        this.service = service;
     }
 
     public int getValueA() {
@@ -41,6 +43,14 @@ public class ComplexObject {
         if (valueA != that.valueA) return false;
         return valueB == that.valueB;
 
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public void setService(Service service) {
+        this.service = service;
     }
 
     @Override
