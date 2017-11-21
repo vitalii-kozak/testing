@@ -76,5 +76,4 @@ public class Calculator {
         validationService.validate(param1);
         validationService.validate(param2);
     }
-
 }
