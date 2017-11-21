@@ -1,6 +1,7 @@
 package calculator.service;
 
 import calculator.domain.ComplexObject;
+import calculator.domain.Service;
 
 /**
  * Created by Vitalii_Kozak on 11/20/2017.

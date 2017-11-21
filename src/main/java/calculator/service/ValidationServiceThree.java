@@ -9,7 +9,7 @@ public class ValidationServiceThree implements ValidationService {
         if (object == null) {
             throw new IllegalArgumentException("Complex object is null !!!");
         }
-        if (object.getValueA() != 50 || object.getValueA() != -100) {
+        if (object.getValueA() != 50 && object.getValueA() != -100) {
             throw new IllegalArgumentException("ValueA must be 50 or -100 !!!");
         }
         if (object.getValueB() >= 0) {

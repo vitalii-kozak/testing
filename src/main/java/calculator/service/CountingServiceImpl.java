@@ -1,6 +1,8 @@
 package calculator.service;
 
 import calculator.domain.ComplexObject;
+import calculator.domain.Operation;
+
 
 /**
  * Created by Vitalii_Kozak on 11/20/2017.
@@ -11,6 +13,7 @@ public class CountingServiceImpl implements CountingService{
         ComplexObject result = new ComplexObject();
         result.setValueA(param1.getValueA() + param2.getValueA());
         result.setValueB(param1.getValueB() + param2.getValueB());
+        result.setService(param1.getService());
         return result;
     }
 
@@ -18,6 +21,7 @@ public class CountingServiceImpl implements CountingService{
         ComplexObject result = new ComplexObject();
         result.setValueA(param1.getValueA() - param2.getValueA());
         result.setValueB(param1.getValueB() - param2.getValueB());
+        result.setService(param1.getService());
         return result;
     }
 
@@ -25,6 +29,7 @@ public class CountingServiceImpl implements CountingService{
         ComplexObject result = new ComplexObject();
         result.setValueA(param1.getValueA() * param2.getValueA());
         result.setValueB(param1.getValueB() * param2.getValueB());
+        result.setService(param1.getService());
         return result;
     }
 
@@ -32,6 +37,7 @@ public class CountingServiceImpl implements CountingService{
         ComplexObject result = new ComplexObject();
         result.setValueA(param1.getValueA() / param2.getValueA());
         result.setValueB(param1.getValueB() / param2.getValueB());
+        result.setService(param1.getService());
         return result;
     }
 }

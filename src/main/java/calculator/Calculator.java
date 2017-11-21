@@ -17,6 +17,7 @@ public class Calculator {
     private CountingService countingService;
     private StatisticService statisticService;
 
+
     public Calculator(CountingService countingService, StatisticService statisticService) {
         this.statisticService = statisticService;
         this.countingService = countingService;
@@ -26,6 +27,7 @@ public class Calculator {
         validationMap.put(Service.ONE, new ValidationServiceOne());
         validationMap.put(Service.TWO, new ValidationServiceTwo());
         validationMap.put(Service.THREE, new ValidationServiceThree());
+
     }
 
     public void setCountingService(CountingService countingService){

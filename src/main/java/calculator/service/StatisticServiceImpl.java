@@ -2,12 +2,14 @@ package calculator.service;
 
 import calculator.domain.Operation;
 
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class StatisticServiceImpl implements StatisticService {
 
     private Map<Operation, Integer> statistics = new HashMap<>();
+
 
     public void increase(Operation operation) {
         int count = getStatistic(operation);
