@@ -9,11 +9,17 @@ public class ComplexObject {
     private Service service;
 
     public ComplexObject() {
+        service = Service.ONE;
+    }
+
+    public ComplexObject(int valueA, int valueB) {
+        this();
+        this.valueA = valueA;
+        this.valueB = valueB;
     }
 
     public ComplexObject(int valueA, int valueB, Service service) {
-        this.valueA = valueA;
-        this.valueB = valueB;
+        this(valueA, valueB);
         this.service = service;
     }
 
